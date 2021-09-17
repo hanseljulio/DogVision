@@ -1,0 +1,39 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/doglist.css') }}">
+    <title>List of dogs</title>
+</head>
+<body>
+
+    <div id="div1" class="my-divs bg-transparent">
+        <div class="titles">
+            <h4>Click <a href="{{ url_for('index') }}">here</a> to return to the home page.</h4>
+            <h4>As of right now, there are {{ length }} possible dog breeds.</h4>
+        </div>
+    </div>
+    <br>
+
+    <div class="doglist">
+        <ul>
+            {% for dog in unique_breeds %}
+                <li> {{ dog }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+
+    <div id="div2" class="my-divs bg-transparent">
+        <div class="arrows">
+            <a href="#div1" id="btn">Go back up</a>
+            <div id="arrow" class="arrow-up"></div>
+        </div>
+        
+    </div>
+
+    <script type=text/javascript src="{{ url_for('static', filename='js/doglist.js') }}"></script>
+</body>
+</html>

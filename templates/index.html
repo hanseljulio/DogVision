@@ -1,0 +1,42 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/style.css') }}">
+    <title>Dog Vision</title>
+</head>
+<body>
+    <div class="container bg-transparent">
+        <div class="card bg-transparent">
+            <div class="content">
+                <h3>Welcome to dog vision!</h3>
+                <p>Upload a picture of your dog and this website will try to guess it.</p>
+                <p>Click <a href="{{ url_for('doglist') }}">here</a> to see what kind of dogs that this website can guess.</p>
+                <br>
+                <form action="/" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" name="image" id="image">
+                            <label class="custom-file-label" for="image">Upload photo here</label>
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <button type="submit">Upload image</button>
+                    </div>
+                    
+                </form>
+                <br>
+                <p>As of right now, this program does not work well with mixed breed dogs. Sorry!</p>
+                <p>You could try... but it's not going to give an accurate result.</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script type=text/javascript src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
+
+

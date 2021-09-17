@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/result.css') }}">
+    <title>Result</title>
+</head>
+<body>
+    <div class="container bg-transparent">
+        <div class="card bg-transparent">
+            <div class="content">
+                <div class="card-content">
+                    <img src={{filename}}> <br>
+                </div>
+                <div class="card-content">
+                    <p> <b>Your dog is a: {{ result }}</b></p>
+                    <p> Reminder: the predictions are not guaranteed to work well with mixed breeds. </p>
+                    <p> Predictions are made based on how similar they are mathematically to a breed in the database.</p>
+                    <p> Click <a href="{{ url_for('index')}}">here</a> to return to the main page.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
