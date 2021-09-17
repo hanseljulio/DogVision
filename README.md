@@ -14,7 +14,7 @@ figure out what kind of breed is a dog. There are 120 different breeds that are 
 
 Simply upload a picture of a dog you want, and we'll try to guess!
 
-## Website will be published soon, due to a 800MB file that makes it hard to publish.
+### To check the website: https://dogvisionweb.herokuapp.com/
 
 ### DISCLAIMER: The predictions are not guaranteed to work well with mixed breeds. Predictions are made based on how similar they are mathematically to a breed in the database.
  
