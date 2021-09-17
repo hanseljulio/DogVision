@@ -2,11 +2,13 @@
 
 ## About this repository
 This is the source code for dog vision, which contains:
-* Python Virtual Environment (env)
 * The Machine Learning (h5) file
 * Jupyter Notebook which contains the documentation for training the machine learning model
 * HTML, CSS and JavaScript files
 * Python file for the backend
+
+Python Virtual Environment (env) is not included because it is too big (looking at you, TensorFlow)
+and requirements.txt is the one that installs all the dependencies. So leave the env behind when pushing to GitHub.
 
 ##  What is Dog Vision?
 Dog vision is a website created using Python, HTML, CSS and JavaScript which uses Machine Learning to
